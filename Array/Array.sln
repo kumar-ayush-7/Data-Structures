@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingInversions", "Count
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMissingNumber", "FindMissingNumber\FindMissingNumber.csproj", "{15DBA1DF-5326-43EF-BE93-1A89870105E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestSumContiguousSubarray", "LargestSumContiguousSubarray\LargestSumContiguousSubarray.csproj", "{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
