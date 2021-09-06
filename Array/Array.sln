@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMissingNumber", "FindMi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestSumContiguousSubarray", "LargestSumContiguousSubarray\LargestSumContiguousSubarray.csproj", "{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeadersInAnArray", "LeadersInAnArray\LeadersInAnArray.csproj", "{375EAAEE-98D9-49A5-AC28-AB0B0E0D39A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B9A3376-D20B-4D41-BB2D-A430AD2FB24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375EAAEE-98D9-49A5-AC28-AB0B0E0D39A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375EAAEE-98D9-49A5-AC28-AB0B0E0D39A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375EAAEE-98D9-49A5-AC28-AB0B0E0D39A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375EAAEE-98D9-49A5-AC28-AB0B0E0D39A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
