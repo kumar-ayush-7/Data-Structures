@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingInversions", "CountingInversions\CountingInversions.csproj", "{71B23A63-94DB-446B-B3D4-6BA0C24E7140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingInversions", "CountingInversions\CountingInversions.csproj", "{71B23A63-94DB-446B-B3D4-6BA0C24E7140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMissingNumber", "FindMissingNumber\FindMissingNumber.csproj", "{15DBA1DF-5326-43EF-BE93-1A89870105E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{71B23A63-94DB-446B-B3D4-6BA0C24E7140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71B23A63-94DB-446B-B3D4-6BA0C24E7140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71B23A63-94DB-446B-B3D4-6BA0C24E7140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15DBA1DF-5326-43EF-BE93-1A89870105E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

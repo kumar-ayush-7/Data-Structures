@@ -13,13 +13,13 @@ namespace CountingInversions
         static void Main(string[] args)
         {
             int[] arr = new int[] { 2, 4, 1, 3, 5 };           
-            Console.WriteLine(getCountingInversions(arr));
+            Console.WriteLine(GetCountingInversions(arr));
         }
 
         // 1. Simple method : For each element, count number of elements which are on right side of it and are smaller than it.
 
 
-        private static int getCountingInversions(int[] arr)
+        private static int GetCountingInversions(int[] arr)
         {
             int arrLen = arr.Length;
             int countInversions = 0;
