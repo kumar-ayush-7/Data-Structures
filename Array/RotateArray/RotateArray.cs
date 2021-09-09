@@ -16,12 +16,11 @@ namespace RotateArray
         {
             int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
             int rotationCount = 8, arrLen = arr.Length;
-            rotationCount = rotationCount > arrLen ? rotationCount - arrLen : rotationCount;
+            rotationCount = rotationCount % arrLen;
             Console.WriteLine($"Array before rotation : {string.Join(", ", arr)}");
             LeftRotate(ref arr,arr.Length, rotationCount);
             Console.WriteLine($"Array post rotation by {rotationCount} : {string.Join(", ", arr)}");
         }
-
         private static void LeftRotate(ref int[] arr, int length, int rotationCount)
         {
             int[] arrTemp = new int[length];
