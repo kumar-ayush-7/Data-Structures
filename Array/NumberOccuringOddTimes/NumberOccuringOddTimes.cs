@@ -22,19 +22,30 @@ namespace NumberOccuringOddTimes
             Console.WriteLine($"Number occuring odd number of times: {GetOddOccurance(arr)}");
         }
 
+        //private static int GetOddOccurance(int[] arr)
+        //{
+        //    Dictionary<int, int> dict = new Dictionary<int, int>();
+        //    foreach(int num in arr)
+        //    {
+        //        if (dict.ContainsKey(num)) dict[num] += 1;
+        //        else dict.Add(num, 1);
+        //    }
+        //    foreach (var num in dict)
+        //    {
+        //        if (num.Value % 2 != 0) return num.Key;
+        //    }
+        //    return 0;
+        //}
+
+        //Using XOR operator
         private static int GetOddOccurance(int[] arr)
         {
-            Dictionary<int, int> dict = new Dictionary<int, int>();
-            foreach(int num in arr)
+            int result = 0;
+            foreach (int item in arr)
             {
-                if (dict.ContainsKey(num)) dict[num] += 1;
-                else dict.Add(num, 1);
+                result = result ^ item;
             }
-            foreach (var num in dict)
-            {
-                if (num.Value % 2 != 0) return num.Key;
-            }
-            return 0;
+            return result;
         }
     }
 }
