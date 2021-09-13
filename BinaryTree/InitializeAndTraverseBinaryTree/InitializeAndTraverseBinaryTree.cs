@@ -64,11 +64,16 @@ namespace InitializeAndTraverseBinaryTree
             Node root = GetNodeInstance("Root");
             Node node1 = GetNodeInstance("LeftChild");
             Node node2 = GetNodeInstance("RightChild");
-
             // left child becomes the left child of the root node
             // right child becomes the right child of the root node
             root.left = node1;
             root.Right = node2;
+
+            // Finally The tree looks like this:
+            //          Root
+            //          / \
+            //  LeftChild  RightChild
+            //
 
             Console.WriteLine("PreOrderTraversal: ");
             PrintPreOrderTraversal(root);
