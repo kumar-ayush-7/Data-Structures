@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace IsGivenTreeBST
 {
@@ -18,27 +19,55 @@ namespace IsGivenTreeBST
                 this.Right = null;
             }
         }
-        // Function to check if given tree is binary tree
+        // Function to check if given tree is binary tree (Iterative)
         private static int IsBinary(Node root, Node prev)
         {
-            if(root!= null)
+            prev = root;
+            Stack<Node> TreeStack = new Stack<Node>();
+            TreeStack.Push(prev);
+            while(TreeStack.Count > 0)
             {
-                if (IsBinary(root.left, prev) != 1)
+                prev = TreeStack.Pop();
+                if (prev.left != null)
                 {
-                    return 0;
+                    if(prev.left.data < prev.data)
+                    {
+                        TreeStack.Push(prev.left);
+                    }
+                    else return 0;
                 }
-                if(prev != null && root.data <= prev.data)
+                if (prev.Right != null)
                 {
-                    return 0;
-                }
-                prev = root;
-                return IsBinary(root.Right, prev);
+                    if (prev.Right.data > prev.data)
+                    {
+                        TreeStack.Push(prev.Right);
+                    }
+                    else return 0;
+                }                
             }
-            else
-            {
-                return 1;
-            }
+            return 1;
         }
+        // Function to check if given tree is binary tree (Recursive method)
+        //private static int IsBinary(Node root, Node prev)
+        //{
+        //    if(root!= null)
+        //    {
+        //        if (IsBinary(root.left, prev) != 1)
+        //        {
+        //            return 0;
+        //        }
+        //        if(prev != null && root.data <= prev.data)
+        //        {
+        //            return 0;
+        //        }
+        //        prev = root;
+        //        return IsBinary(root.Right, prev);
+        //    }
+        //    else
+        //    {
+        //        return 1;
+        //    }
+        //}
         // Function for inorder traversal
         private static void PrintInOrderTraversal(Node root)
         {
