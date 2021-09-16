@@ -97,6 +97,79 @@ namespace MorrisBSTTraversal
                 }
             }
         }
+
+        // Function that will do postorder traversal of BST using morris algorithm
+        private static void MorrisPostorderTraversal(Node root)
+        {
+            // Making our tree left subtree of a dummy Node
+            Node dummyRoot = GetNodeInstance(0); ;
+            dummyRoot.left = root;
+
+            // Think of current as the current node 
+            Node current = dummyRoot, predecessor, first, middle, last;
+            while (current != null)
+            {
+                if (current.left == null)
+                {
+                    current = current.Right;
+                }
+                else
+                {
+                    /* current has a left child => it also has a predeccessor
+                       make current as right child predeccessor of current    
+                    */
+                    predecessor = current.left;
+                    while (predecessor.Right != null && predecessor.Right != current)
+                    {
+                        predecessor = predecessor.Right;
+                    }
+
+                    if (predecessor.Right == null)
+                    {
+
+                        // predeccessor found for first time
+                        // modify the tree
+
+                        predecessor.Right = current;
+                        current = current.left;
+
+                    }
+                    else
+                    {
+
+                        // predeccessor found second time
+                        // reverse the right references in chain from predecessor to current
+                        first = current;
+                        middle = current.left;
+                        while (middle != current)
+                        {
+                            last = middle.Right;
+                            middle.Right = first;
+                            first = middle;
+                            middle = last;
+                        }
+
+                        // visit the nodes from predecessor to current
+                        // again reverse the right references from predecessor to current    
+                        first = current;
+                        middle = predecessor;
+                        while (middle != current)
+                        {
+                            Console.Write($"{middle.data} -> ");
+                            last = middle.Right;
+                            middle.Right = first;
+                            first = middle;
+                            middle = last;
+                        }
+
+                        // remove the predecessor to node reference to restore the tree structure
+                        predecessor.Right = null;
+                        current = current.Right;
+                    }
+                }
+            }
+        }
+
         private static Node GetNodeInstance(int data)
         {
             return new Node(data);
@@ -130,10 +203,12 @@ namespace MorrisBSTTraversal
             //       2   4 6   8
             //
 
-            Console.WriteLine("InOrderTraversal: ");
-            MorrisInOrderTraversal(root);
-            Console.WriteLine("\nPreOrderTraversal: ");
+            Console.WriteLine("PreOrderTraversal: ");
             MorrisPreOrderTraversal(root);
+            Console.WriteLine("\nInOrderTraversal: ");
+            MorrisInOrderTraversal(root);
+            Console.WriteLine("\nPostOrderTraversal: ");
+            MorrisPostorderTraversal(root);
         }
     }
 }
