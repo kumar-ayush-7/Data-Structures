@@ -5,9 +5,8 @@ namespace IsGivenTreeBST
 {
     class IsGivenTreeBST
     {
-        public static Node prev = null;
         // creting a node class for creating nodes of the binary tree
-        public class Node
+        private class Node
         {
             public int data;
             public Node left;
