@@ -46,7 +46,8 @@ namespace SearchElementInBST
                     return current;
                 else if (key > current.data)
                     current = current.Right;
-                else current = current.left;
+                else
+                    current = current.left;
             }
             return null;
 
