@@ -20,7 +20,8 @@ namespace InsertionAndDeletionInBST
         /// <summary>
         /// Function to insert element in binary search tree
         /// </summary>
-        /// <param name="root"></param>
+        /// <param name="root">root node of the binary tree</param>
+        /// <param name="element">data of element to be inserted</param>
         private static void InsertIntoBST(Node root, int element)
         {
             Node parent = root;
@@ -42,6 +43,40 @@ namespace InsertionAndDeletionInBST
                 parent.Right = newNode;
             else
                 parent.left = newNode;
+        }
+        /// <summary>
+        /// Function will delete any given node if exists from the given tree.
+        /// </summary>
+        /// <param name="root">root node of the binary tree</param>
+        /// <param name="element">data of element to be inserted</param>
+        private static Node DeleteFromBst(Node root, int element)
+        {
+            Node predecessor = null;
+            if (root == null)
+                return null;
+            else if (root.left == null && root.Right == null)
+                return null;
+            else if (element > root.data)
+                root.Right = DeleteFromBst(root.Right, element);
+            else if (element < root.data)
+                root.left = DeleteFromBst(root.left, element);
+            else
+            {
+                predecessor = GetInorderPredecessor(root);
+                root.data = predecessor.data;
+                root.left = DeleteFromBst(root.left, predecessor.data);
+            }
+            return root;
+        }
+
+        private static Node GetInorderPredecessor(Node root)
+        {
+            root = root.left;
+            while (root.Right != null)
+            {
+                root = root.Right;
+            }
+            return root;
         }
 
         // Function for inorder traversal
@@ -98,6 +133,21 @@ namespace InsertionAndDeletionInBST
             element = 45;
             Console.WriteLine($"\nInserting element {element} to BST");
             InsertIntoBST(root, element);
+            PrintInOrderTraversal(root);
+
+            element = 25;
+            Console.WriteLine($"\nDeleting element {element} from BST");
+            root = DeleteFromBst(root, element);
+            PrintInOrderTraversal(root);
+
+            element = 5;
+            Console.WriteLine($"\nDeleting element {element} from BST");
+            root = DeleteFromBst(root, element);
+            PrintInOrderTraversal(root);
+
+            element = 4;
+            Console.WriteLine($"\nDeleting element {element} from BST");
+            root = DeleteFromBst(root, element);
             PrintInOrderTraversal(root);
         }
     }
